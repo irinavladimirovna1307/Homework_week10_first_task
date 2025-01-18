@@ -13,7 +13,7 @@
 //     let current = parseInt(imgElement.getAttribute('data-current'));
 
 //     if (current === 1) {
-//         imgElement.src = 'image3.jpg';  
+//         imgElement.src = 'image3.jpg';
 //         imgElement.setAttribute('data-current', 3);
 //     } else if (current === 2) {
 //         imgElement.src = 'image1.jpg';
@@ -44,7 +44,7 @@
 //Без DOM:
 // Функция, выводящая сообщение в консоли
 function displayMessage() {
-    console.log('Я учу JavaScript!');
+  console.log("Я учу JavaScript!");
 }
 
 // Вызов функции для вывода сообщения
@@ -52,9 +52,9 @@ displayMessage();
 
 // Массив с изображениями (ссылками на изображения)
 const images = [
-    './image1.jpg',
-    './image2.jpg',
-    './image3.jpg'
+  "./images/image1.jpg",
+  "./images/image2.jpg",
+  "./images/image3.jpg",
 ];
 
 // Переменная для отслеживания текущего изображения
@@ -62,19 +62,19 @@ let currentIndex = 0;
 
 // Функция для переключения на следующее изображение
 function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateImage();
+  currentIndex = (currentIndex + 1) % images.length;
+  updateImage();
 }
 
 // Функция для переключения на предыдущее изображение
 function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateImage();
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateImage();
 }
 
 // Функция для обновления изображения
 function updateImage() {
-    const imageElement = document.getElementById('image');
-    imageElement.src = images[currentIndex];
-    imageElement.setAttribute('data-current', currentIndex + 1);
+  const imageElement = document.getElementById("image");
+  imageElement.src = images[currentIndex];
+  imageElement.setAttribute("data-current", currentIndex + 1);
 }
